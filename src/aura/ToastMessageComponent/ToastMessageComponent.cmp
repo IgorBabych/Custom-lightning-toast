@@ -1,0 +1,29 @@
+<aura:component description="ToastMessageComponent">
+    <aura:registerEvent name="messageEvent" type="c:ToastMessageEvent"/>
+
+    <c:ToastMessage timeout="1000"/>
+
+    <div class="slds-p-around_small">
+        <lightning:button
+                label="Base"
+                variant="neutral"
+                onclick="{!c.showBaseToast}"/>
+
+        <lightning:button
+                label="Success"
+                variant="Success"
+                onclick="{!c.showSuccessToast}"/>
+
+        <lightning:button
+                label="Warning"
+                variant="inverse"
+                class="warning"
+                onclick="{!c.showWarningToast}"/>
+
+        <lightning:button
+                label="Error"
+                variant="destructive"
+                onclick="{!c.showErrorToast}"/>
+    </div>
+
+</aura:component>
